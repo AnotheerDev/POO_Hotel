@@ -14,18 +14,33 @@ spl_autoload_register(function ($class_name) {
 });
 
 
-//Classe associative client > chambre > date de reservation :
+// Classe associative client > chambre > date de reservation : fait
 // chainage pour aller chercher des infos " -> " :
+// ajouter les objets chambres et reservations dans l'index : a faire
+
+
+// objet de la class Chambre :
 
 
 
-// object de la class Client :
+
+
+
+// objet de la class Reservation : 
+
+
+
+
+
+// objet de la class Client :
 $MickaMurmann = new Client("Micka", "Murmann");
 $VirgileGibello = new Client("Virgile", "Gibello");
 
 
 
 
-// object de la class Hotel :
+// objet de la class Hotel :
 $HotelHilton = new Hotel("Hilton","****", "10  route de la Gare", "67000", "STRASBOURG");
 $HotelRegent = new Hotel("Regent", "****","6 rue Pierre Demours", "75017", "PARIS" );
+
+
