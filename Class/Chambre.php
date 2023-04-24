@@ -3,21 +3,23 @@
 class Chambre
 {
         //Attributs :
-    private string $Numero;
-    private string $NbLits;
-    private int $Prix;
-    private bool $Wifi;
-    private bool $Etat;
+    private string $numero;
+    private string $nbLits;
+    private int $prix;
+    private bool $wifi;
+    private bool $etat;
+    private array $reservations;
 
 
 
-    public function __construct(string $Numero, string $NbLits, int $Prix, bool $Wifi, bool $Etat)
+    public function __construct(string $numero, string $nbLits, int $prix, bool $wifi, bool $etat)
     {
-        $this->Numero = $Numero;
-        $this->NbLits = $NbLits;
-        $this->Prix = $Prix;
-        $this->Wifi = $Wifi;
-        $this->Etat = $Etat;
+        $this->numero = $numero;
+        $this->nbLits = $nbLits;
+        $this->prix = $prix;
+        $this->wifi = $wifi;
+        $this->etat = $etat;
+        $this->reservations = [];
     }
 
 
@@ -26,60 +28,70 @@ class Chambre
         // getter et setter pour chaque attribut de ma class :
     public function getNumero()
     {
-        return $this->Numero;
+        return $this->numero;
     }
 
-    public function setNumero($Numero)
+    public function setNumero($numero)
     {
-        $this->Numero = $Numero;
+        $this->numero = $numero;
     }
 
     public function getNbLits()
     {
-        return $this->NbLits;
+        return $this->nbLits;
     }
 
-    public function setNbLits($NbLits)
+    public function setNbLits($nbLits)
     {
-        $this->NbLits = $NbLits;
+        $this->nbLits = $nbLits;
     }
 
     public function getPrix()
     {
-        return $this->Prix;
+        return $this->prix;
     }
 
-    public function setPrix($Prix)
+    public function setPrix($prix)
     {
-        $this->Prix = $Prix;
+        $this->prix = $prix;
     }
 
 
     public function getWifi()
     {
-        return $this->Wifi;
+        return $this->wifi;
     }
 
-    public function setWifi($Wifi)
+    public function setWifi($wifi)
     {
-        $this->Wifi = $Wifi;
+        $this->wifi = $wifi;
     }
 
     public function getEtat()
     {
-        return $this->Etat;
+        return $this->etat;
     }
 
 
-    public function setEtat($Etat)
+    public function setEtat($etat)
     {
-        $this->Etat = $Etat;
+        $this->etat = $etat;
     }
 
 
 
     public function __toString()
     {
-        return $this->Numero;
+        return $this->numero;
     }
+
+
+
+
+    public function ajoutResa(Reservation $nouvelleResa)
+    {
+        $this->reservations[] = $nouvelleResa;
+    }
+
+
 }

@@ -3,79 +3,79 @@
 class Hotel
 {
         //Attributs:
-    private string $nom;
-    private string $etoile;
-    private string $adresse;
-    private string $cd;
-    private string $ville;
+    private string $Nom;
+    private string $Etoile;
+    private string $Adresse;
+    private string $Cd;
+    private string $Ville;
 
 
-    
+
 //tableau de chambre
-    public function __construct(string $nom, string $etoile, string $adresse, string $cd, string $ville)
+    public function __construct(string $Nom, string $Etoile, string $Adresse, string $Cd, string $Ville)
     {
-        $this->nom = $nom;
-        $this->etoile = $etoile;
-        $this->adresse = $adresse;
-        $this->cd = $cd;
-        $this->ville = $ville;
+        $this->Nom = $Nom;
+        $this->Etoile = $Etoile;
+        $this->Adresse = $Adresse;
+        $this->Cd = $Cd;
+        $this->Ville = $Ville;
     }
 
         // getter et setter pour chaque attribut de ma class :
     public function getNom()
     {
-        return $this->nom;
+        return $this->Nom;
     }
 
-    public function setNom($nom)
+    public function setNom($Nom)
     {
-        $this->nom = $nom;
+        $this->Nom = $Nom;
     }
 
     public function getEtoile()
     {
-        return $this->etoile;
+        return $this->Etoile;
     }
 
-    public function setEtoile($etoile)
+    public function setEtoile($Etoile)
     {
-        $this->etoile = $etoile;
+        $this->Etoile = $Etoile;
     }
 
     public function getAdresse()
     {
-        return $this->adresse;
+        return $this->Adresse;
     }
 
-    public function setAdresse($adresse)
+    public function setAdresse($Adresse)
     {
-        $this->adresse = $adresse;
+        $this->Adresse = $Adresse;
     }
 
     public function getCd()
     {
-        return $this->cd;
+        return $this->Cd;
     }
 
-    public function setCd($cd)
+    public function setCd($Cd)
     {
-        $this->cd = $cd;
+        $this->Cd = $Cd;
     }
 
     public function getVille()
     {
-        return $this->ville;
+        return $this->Ville;
     }
 
-    public function setVille($ville)
+    public function setVille($Ville)
     {
-        $this->ville = $ville;
+        $this->Ville = $Ville;
     }
 
 
 
     public function __toString()
     {
-        return $this->nom;
+        return $this->Nom;
     }
 }

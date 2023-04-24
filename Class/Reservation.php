@@ -3,18 +3,20 @@
 class Reservation
 {
    //Attributs :
-   private Client $Clients;
-   private Chambre $Chambres;
-   private DateTime $DateEntree;
-   private DateTime $DateSortie;
+   private Client $client;
+   private Chambre $chambre;
+   private DateTime $dateEntree;
+   private DateTime $dateSortie;
 
 
-    public function __construct(Client $Clients, Chambre $Chambres, string $DateEntree, string $DateSortie)
+    public function __construct(Client $client, Chambre $chambre, string $dateEntree, string $dateSortie)
     {
-        $this->Clients = $Clients;
-        $this->Chambres = $Chambres;
-        $this->Clients = new DateTime($DateEntree);
-        $this->Clients = new DateTime($DateSortie);
+        $this->client = $client;
+        $this->chambre = $chambre;
+        $this->dateEntree = new DateTime($dateEntree);
+        $this->dateSortie = new DateTime($dateSortie);
+        $this->client->ajoutResa($this);
+        $this->chambre->ajoutResa($this);
     }
 
 
@@ -24,49 +26,49 @@ class Reservation
 
 
         // getter et setter pour chaque attribut de ma class :
-   public function getClients()
+   public function getClient()
    {
-      return $this->Clients;
+      return $this->client;
    }
 
-   public function setClients($Clients)
+   public function setClient($client)
    {
-      $this->Clients = $Clients;
+      $this->client = $client;
    }
 
-   public function getChambres()
+   public function getChambre()
    {
-      return $this->Chambres;
+      return $this->chambre;
    }
 
-   public function setChambres($Chambres)
+   public function setChambres($chambre)
    {
-      $this->Chambres = $Chambres;
+      $this->chambre = $chambre;
    }
 
    public function getDateEntree()
    {
-      return $this->DateEntree;
+      return $this->dateEntree;
    }
 
-   public function setDateEntree($DateEntree)
+   public function setDateEntree($dateEntree)
    {
-      $this->DateEntree = $DateEntree;
+      $this->dateEntree = $dateEntree;
    }
  
    public function getDateSortie()
    {
-      return $this->DateSortie;
+      return $this->dateSortie;
    }
 
-   public function setDateSortie($DateSortie)
+   public function setDateSortie($dateSortie)
    {
-      $this->DateSortie = $DateSortie;
+      $this->dateSortie = $dateSortie;
    }
 
 
-//    public function __toString()
-//    {
-//     return;
-//    }
+   public function __toString()
+   {
+    return $this->client . " " . $this->chambre;
+   }
 }

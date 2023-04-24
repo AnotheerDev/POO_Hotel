@@ -5,13 +5,14 @@ class Client
         //Attributs
     private string $nom;
     private string $prenom;
-
+    private array $reservations;
 
 
     public function __construct(string $nom, string $prenom)
     {
         $this->nom = $nom;
         $this->prenom = $prenom;
+        $this->reservations = [];
     }
 
 
@@ -42,7 +43,10 @@ class Client
     }
 
 
-
+    public function ajoutResa(Reservation $nouvelleResa)
+    {
+        $this->reservations[] = $nouvelleResa;
+    }
 
 
 
