@@ -13,8 +13,12 @@ spl_autoload_register(function ($class_name) {
     require 'class/' . $class_name . '.php';
 });
 
-//Classe associative client > chambre > date de reservation 
-// chainage
+
+//Classe associative client > chambre > date de reservation :
+// chainage pour aller chercher des infos " -> " :
+
+
+
 // object de la class Client :
 $MickaMurmann = new Client("Micka", "Murmann");
 $VirgileGibello = new Client("Virgile", "Gibello");
@@ -24,4 +28,4 @@ $VirgileGibello = new Client("Virgile", "Gibello");
 
 // object de la class Hotel :
 $HotelHilton = new Hotel("Hilton","****", "10  route de la Gare", "67000", "STRASBOURG");
-// $HotelRegent = new Hotel();
+$HotelRegent = new Hotel("Regent", "****","6 rue Pierre Demours", "75017", "PARIS" );

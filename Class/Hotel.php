@@ -2,13 +2,15 @@
 
 class Hotel
 {
-    //Attributs:
+        //Attributs:
     private string $nom;
     private string $etoile;
     private string $adresse;
     private string $cd;
     private string $ville;
 
+
+    
 //tableau de chambre
     public function __construct(string $nom, string $etoile, string $adresse, string $cd, string $ville)
     {
@@ -20,7 +22,6 @@ class Hotel
     }
 
         // getter et setter pour chaque attribut de ma class :
-
     public function getNom()
     {
         return $this->nom;

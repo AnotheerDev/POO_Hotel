@@ -2,22 +2,22 @@
 
 class Chambre
 {
-    //Attributs :
+        //Attributs :
     private string $Numero;
     private string $NbLits;
     private int $Prix;
     private bool $Wifi;
-    private DateTime $Reservation;
+    private bool $Etat;
 
-// bool etat 
 
-    public function __construct(string $Numero, string $NbLits, int $Prix, bool $Wifi, string $Reservation)
+
+    public function __construct(string $Numero, string $NbLits, int $Prix, bool $Wifi, bool $Etat)
     {
         $this->Numero = $Numero;
         $this->NbLits = $NbLits;
         $this->Prix = $Prix;
         $this->Wifi = $Wifi;
-        $this->Reservation = new DateTime($Reservation);
+        $this->Etat = $Etat;
     }
 
 
@@ -65,15 +65,15 @@ class Chambre
         $this->Wifi = $Wifi;
     }
 
-    public function getReservation()
+    public function getEtat()
     {
-        return $this->Reservation;
+        return $this->Etat;
     }
 
 
-    public function setReservation($Reservation)
+    public function setEtat($Etat)
     {
-        $this->Reservation = $Reservation;
+        $this->Etat = $Etat;
     }
 
 
