@@ -20,6 +20,7 @@ spl_autoload_register(function ($class_name) {
 
 
 // objet de la class Chambre :
+$chambre1 = new Chambre ("1", "1", "120", "false", "true");
 
 
 
@@ -33,14 +34,14 @@ spl_autoload_register(function ($class_name) {
 
 
 // objet de la class Client :
-$MickaMurmann = new Client("Micka", "Murmann");
-$VirgileGibello = new Client("Virgile", "Gibello");
+$mickaMurmann = new Client("Micka", "Murmann");
+$virgileGibello = new Client("Virgile", "Gibello");
 
 
 
 
 // objet de la class Hotel :
-$HotelHilton = new Hotel("Hilton","****", "10  route de la Gare", "67000", "STRASBOURG");
-$HotelRegent = new Hotel("Regent", "****","6 rue Pierre Demours", "75017", "PARIS" );
+$hotelHilton = new Hotel("Hilton","****", "10  route de la Gare", "67000", "STRASBOURG");
+$hotelRegent = new Hotel("Regent", "****","6 rue Pierre Demours", "75017", "PARIS" );
 
 
