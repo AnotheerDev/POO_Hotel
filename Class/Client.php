@@ -16,7 +16,6 @@ class Client
 
 
         // getter et setter pour chaque attribut de ma class :
-
     public function getNom()
     {
         return $this->nom;
@@ -36,7 +35,6 @@ class Client
     {
         $this->prenom = $prenom;
     }
-
 
     public function __toString()
     {
