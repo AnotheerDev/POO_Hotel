@@ -9,7 +9,7 @@ class Hotel
     private string $cd;
     private string $ville;
 
-
+//tableau de chambre
     public function __construct(string $nom, string $etoile, string $adresse, string $cd, string $ville)
     {
         $this->nom = $nom;
@@ -70,6 +70,8 @@ class Hotel
     {
         $this->ville = $ville;
     }
+
+
 
     public function __toString()
     {

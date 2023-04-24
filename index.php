@@ -1,9 +1,9 @@
-<h1> Exercice POO Hotel </2>
+<h1> Exercice POO Hotel </h1>
 
 <p> A partir de ces captures d’écran, réaliser l’application en POO
     permettant la gestion de réservations de chambres par des clients dans différents hôtels:</p>
 
-<h2> Resultat </2>
+<h2> Resultat </h2>
 
 
 <?php
@@ -13,13 +13,15 @@ spl_autoload_register(function ($class_name) {
     require 'class/' . $class_name . '.php';
 });
 
-
-
+//Classe associative client > chambre > date de reservation 
+// chainage
 // object de la class Client :
 $MickaMurmann = new Client("Micka", "Murmann");
+$VirgileGibello = new Client("Virgile", "Gibello");
 
 
 
 
 // object de la class Hotel :
 $HotelHilton = new Hotel("Hilton","****", "10  route de la Gare", "67000", "STRASBOURG");
+// $HotelRegent = new Hotel();

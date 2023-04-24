@@ -9,6 +9,8 @@ class Chambre
     private bool $Wifi;
     private DateTime $Reservation;
 
+// bool etat 
+
     public function __construct(string $Numero, string $NbLits, int $Prix, bool $Wifi, string $Reservation)
     {
         $this->Numero = $Numero;
@@ -72,5 +74,12 @@ class Chambre
     public function setReservation($Reservation)
     {
         $this->Reservation = $Reservation;
+    }
+
+
+
+    public function __toString()
+    {
+        return $this->Numero;
     }
 }
