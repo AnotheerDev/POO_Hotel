@@ -80,7 +80,7 @@ class Chambre
 
     public function __toString()
     {
-        return $this->numero;
+        return $this->numero . "(" . $this->nbLits . " lits - " . $this->prix . " € - " . " Wifi : " . $this->wifi . ")";
     }
 
 

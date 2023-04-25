@@ -67,8 +67,16 @@ class Reservation
    }
 
 
+
    public function __toString()
    {
       return $this->client . " " . $this->chambre;
+   }
+
+
+
+   public function getInfoResaClient()
+   {
+      
    }
 }

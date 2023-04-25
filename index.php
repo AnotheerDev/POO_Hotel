@@ -19,6 +19,12 @@ spl_autoload_register(function ($class_name) {
 // ajouter les objets chambres et reservations dans l'index : a faire
 
 
+// objet de la class Hotel :
+$hotelHilton = new Hotel("Hilton", "****", 30, "10 route de la Gare", "67000", "STRASBOURG");
+$hotelRegent = new Hotel("Regent", "****", 25, "6 rue Pierre Demours", "75017", "PARIS");
+
+
+
 // objet de la class Chambre :
 $chambre1 = new Chambre("1", "2", 120, "false", "true");
 $chambre2 = new Chambre("2", "2", 120, "false", "true");
@@ -28,6 +34,13 @@ $chambre16 = new Chambre("16", "3", 300, "true", "true");
 $chambre17 = new Chambre("17", "3", 300, "true", "true");
 $chambre18 = new Chambre("18", "3", 300, "true", "true");
 $chambre19 = new Chambre("19", "3", 300, "true", "true");
+
+
+
+// objet de la class Client :
+$mickaMurmann = new Client("Micka", "Murmann");
+$virgileGibello = new Client("Virgile", "Gibello");
+
 
 
 
@@ -42,17 +55,9 @@ $resaVirgile = new Reservation($virgileGibello, $chambre17, "01-01-2021", "01-01
 
 
 
-// objet de la class Client :
-$mickaMurmann = new Client("Micka", "Murmann");
-$virgileGibello = new Client("Virgile", "Gibello");
-
-
-
-
-// objet de la class Hotel :
-$hotelHilton = new Hotel("Hilton", "****", 30, "10 route de la Gare", "67000", "STRASBOURG");
-$hotelRegent = new Hotel("Regent", "****", 25, "6 rue Pierre Demours", "75017", "PARIS");
 
 
 
 $hotelHilton->getInfoHotel();
+echo "-------------------------------------------<br>";
+echo $chambre1;
