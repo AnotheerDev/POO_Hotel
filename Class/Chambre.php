@@ -2,7 +2,7 @@
 
 class Chambre
 {
-        //Attributs :
+    //Attributs :
     private string $numero;
     private string $nbLits;
     private int $prix;
@@ -23,9 +23,9 @@ class Chambre
     }
 
 
-    
 
-        // getter et setter pour chaque attribut de ma class :
+
+    // getter et setter pour chaque attribut de ma class :
     public function getNumero()
     {
         return $this->numero;
@@ -56,7 +56,6 @@ class Chambre
         $this->prix = $prix;
     }
 
-
     public function getWifi()
     {
         return $this->wifi;
@@ -71,7 +70,6 @@ class Chambre
     {
         return $this->etat;
     }
-
 
     public function setEtat($etat)
     {
@@ -92,6 +90,4 @@ class Chambre
     {
         $this->reservations[] = $nouvelleResa;
     }
-
-
 }

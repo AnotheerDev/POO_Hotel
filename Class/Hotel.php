@@ -2,7 +2,7 @@
 
 class Hotel
 {
-        //Attributs:
+    //Attributs:
     private string $nom;
     private string $etoile;
     private int $nbChambre;
@@ -23,7 +23,7 @@ class Hotel
         $this->ville = $ville;
     }
 
-        // getter et setter pour chaque attribut de ma class :
+    // getter et setter pour chaque attribut de ma class :
     public function getNom()
     {
         return $this->nom;
@@ -88,7 +88,16 @@ class Hotel
 
     public function __toString()
     {
-        return $this->nom;
+        return $this->nom . " " . $this->etoile . " " . $this->ville;
     }
 
+
+    public function getInfoHotel()
+    {
+        $result = "<h2>$this</h2><br>"
+            . "Nombre de chambres : $this->nbChambre <br>"
+            . "Nombre de chambres réservées :  <br>"
+            . "Nombre de chambres dispo :  <br>";
+        echo $result;
+    }
 }

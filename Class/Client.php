@@ -2,7 +2,7 @@
 
 class Client
 {
-        //Attributs
+    //Attributs
     private string $nom;
     private string $prenom;
     private array $reservations;
@@ -16,7 +16,7 @@ class Client
     }
 
 
-        // getter et setter pour chaque attribut de ma class :
+    // getter et setter pour chaque attribut de ma class :
     public function getNom()
     {
         return $this->nom;
@@ -47,8 +47,4 @@ class Client
     {
         $this->reservations[] = $nouvelleResa;
     }
-
-
-
-
 }

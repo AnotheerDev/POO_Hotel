@@ -2,7 +2,7 @@
 
 class Reservation
 {
-      //Attributs :
+   //Attributs :
    private Client $client;
    private Chambre $chambre;
    private DateTime $dateEntree;
@@ -25,7 +25,7 @@ class Reservation
 
 
 
-        // getter et setter pour chaque attribut de ma class :
+   // getter et setter pour chaque attribut de ma class :
    public function getClient()
    {
       return $this->client;
@@ -69,6 +69,6 @@ class Reservation
 
    public function __toString()
    {
-   return $this->client . " " . $this->chambre;
+      return $this->client . " " . $this->chambre;
    }
 }
