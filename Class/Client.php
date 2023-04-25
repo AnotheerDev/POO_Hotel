@@ -47,4 +47,13 @@ class Client
     {
         $this->reservations[] = $nouvelleResa;
     }
+
+    public function getInfoResaClient()
+    {
+        $result = "<h2>Réservations de $this</h2><br>";
+        foreach ($this->reservations as $resa) {
+            $result .= $resa . "<br>";
+        }
+        echo $result;
+    }
 }

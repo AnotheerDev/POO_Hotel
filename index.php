@@ -16,7 +16,7 @@ spl_autoload_register(function ($class_name) {
 
 // Classe associative client > chambre > date de reservation : fait
 // chainage pour aller chercher des infos " -> " :
-// ajouter les objets chambres et reservations dans l'index : a faire
+// ajouter les objets chambres et reservations dans l'index : fait
 
 
 // objet de la class Hotel :
@@ -60,4 +60,8 @@ $resaVirgile = new Reservation($virgileGibello, $chambre17, "01-01-2021", "01-01
 
 $hotelHilton->getInfoHotel();
 echo "-------------------------------------------<br>";
-echo $chambre1;
+$chambre1;
+echo "-------------------------------------------<br>";
+$mickaMurmann->getInfoResaClient();
+echo "-------------------------------------------<br>";
+$hotelHilton->getInfoResaHotel();

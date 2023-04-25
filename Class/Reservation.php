@@ -3,20 +3,20 @@
 class Reservation
 {
    //Attributs :
-   private Client $client;
-   private Chambre $chambre;
+   private Client $clients;
+   private Chambre $chambres;
    private DateTime $dateEntree;
    private DateTime $dateSortie;
 
 
-   public function __construct(Client $client, Chambre $chambre, string $dateEntree, string $dateSortie)
+   public function __construct(Client $clients, Chambre $chambres, string $dateEntree, string $dateSortie)
    {
-      $this->client = $client;
-      $this->chambre = $chambre;
+      $this->clients = $clients;
+      $this->chambres = $chambres;
       $this->dateEntree = new DateTime($dateEntree);
       $this->dateSortie = new DateTime($dateSortie);
-      $this->client->ajoutResa($this);
-      $this->chambre->ajoutResa($this);
+      $this->clients->ajoutResa($this);
+      $this->chambres->ajoutResa($this);
    }
 
 
@@ -26,24 +26,24 @@ class Reservation
 
 
    // getter et setter pour chaque attribut de ma class :
-   public function getClient()
+   public function getClients()
    {
-      return $this->client;
+      return $this->clients;
    }
 
-   public function setClient($client)
+   public function setClients($clients)
    {
-      $this->client = $client;
+      $this->clients = $clients;
    }
 
-   public function getChambre()
+   public function getChambres()
    {
-      return $this->chambre;
+      return $this->chambres;
    }
 
-   public function setChambres($chambre)
+   public function setChambres($chambres)
    {
-      $this->chambre = $chambre;
+      $this->chambres = $chambres;
    }
 
    public function getDateEntree()
@@ -70,13 +70,17 @@ class Reservation
 
    public function __toString()
    {
-      return $this->client . " " . $this->chambre;
+      return $this->clients . " " . $this->chambres;
    }
 
 
 
-   public function getInfoResaClient()
-   {
-      
-   }
+   // public function getInfoResaHotel()
+   // {
+   //    $result = "<h2>Réservations de $this</h2><br>";
+   //    foreach ($this->client as $client) {
+   //       $result .= $client . "<br>";
+   //    }
+   //    echo $result; 
+   // }
 }
