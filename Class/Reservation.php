@@ -17,6 +17,8 @@ class Reservation
       $this->dateSortie = new DateTime($dateSortie);
       $this->clients->ajoutResa($this);
       $this->chambres->ajoutResa($this);
+      // ajout hotel à la class chambre ?
+      // $this->chambres->getHotel->ajoutResa($this); ajouter
    }
 
 
@@ -67,7 +69,7 @@ class Reservation
    }
 
 
-
+// ajouter les dates
    public function __toString()
    {
       return $this->clients . " " . $this->chambres;

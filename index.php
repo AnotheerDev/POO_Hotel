@@ -18,6 +18,9 @@ spl_autoload_register(function ($class_name) {
 // chainage pour aller chercher des infos " -> " :
 // ajouter les objets chambres et reservations dans l'index : fait
 // les dates ne s'affichent pas dans getinforesa
+// attribut reserver dans chambre
+// count du reserver
+
 
 
 // objet de la class Hotel :
@@ -27,14 +30,14 @@ $hotelRegent = new Hotel("Regent", "****", 25, "6 rue Pierre Demours", "75017", 
 
 
 // objet de la class Chambre :
-$chambre1 = new Chambre("1", "2", 120, "false", "true");
-$chambre2 = new Chambre("2", "2", 120, "false", "true");
-$chambre3 = new Chambre("3", "2", 120, "false", "true");
-$chambre4 = new Chambre("4", "2", 120, "false", "true");
-$chambre16 = new Chambre("16", "3", 300, "true", "true");
-$chambre17 = new Chambre("17", "3", 300, "true", "true");
-$chambre18 = new Chambre("18", "3", 300, "true", "true");
-$chambre19 = new Chambre("19", "3", 300, "true", "true");
+$chambre1 = new Chambre("1", "2", 120, "false", "true", $hotelHilton);
+$chambre2 = new Chambre("2", "2", 120, "false", "true", $hotelHilton);
+$chambre3 = new Chambre("3", "2", 120, "false", "true", $hotelHilton);
+$chambre4 = new Chambre("4", "2", 120, "false", "true", $hotelHilton);
+$chambre16 = new Chambre("16", "3", 300, "true", "true", $hotelHilton);
+$chambre17 = new Chambre("17", "3", 300, "true", "true", $hotelHilton);
+$chambre18 = new Chambre("18", "3", 300, "true", "true", $hotelHilton);
+$chambre19 = new Chambre("19", "3", 300, "true", "true", $hotelHilton);
 
 
 
