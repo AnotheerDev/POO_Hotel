@@ -35,7 +35,9 @@ $chambre19 = new Chambre("19", "3", 300, "true", "true");
 
 
 // objet de la class Reservation : 
-
+$resaMicka1 = new Reservation($mickaMurmann, $chambre3, "11-03-2021", "15-03-2021");
+$resaMicka2 = new Reservation($mickaMurmann, $chambre4, "01-04-2021", "17-04-2021");
+$resaVirgile = new Reservation($virgileGibello, $chambre17, "01-01-2021", "01-01-2021");
 
 
 
