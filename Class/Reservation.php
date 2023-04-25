@@ -2,22 +2,22 @@
 
 class Reservation
 {
-   //Attributs :
+      //Attributs :
    private Client $client;
    private Chambre $chambre;
    private DateTime $dateEntree;
    private DateTime $dateSortie;
 
 
-    public function __construct(Client $client, Chambre $chambre, string $dateEntree, string $dateSortie)
-    {
-        $this->client = $client;
-        $this->chambre = $chambre;
-        $this->dateEntree = new DateTime($dateEntree);
-        $this->dateSortie = new DateTime($dateSortie);
-        $this->client->ajoutResa($this);
-        $this->chambre->ajoutResa($this);
-    }
+   public function __construct(Client $client, Chambre $chambre, string $dateEntree, string $dateSortie)
+   {
+      $this->client = $client;
+      $this->chambre = $chambre;
+      $this->dateEntree = new DateTime($dateEntree);
+      $this->dateSortie = new DateTime($dateSortie);
+      $this->client->ajoutResa($this);
+      $this->chambre->ajoutResa($this);
+   }
 
 
 
@@ -55,7 +55,7 @@ class Reservation
    {
       $this->dateEntree = $dateEntree;
    }
- 
+
    public function getDateSortie()
    {
       return $this->dateSortie;
@@ -69,6 +69,6 @@ class Reservation
 
    public function __toString()
    {
-    return $this->client . " " . $this->chambre;
+   return $this->client . " " . $this->chambre;
    }
 }
