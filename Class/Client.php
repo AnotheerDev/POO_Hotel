@@ -56,4 +56,14 @@ class Client
         }
         echo $result;
     }
+
+   
+
+    
+    // foreach ($this->reservations as $resa => $prix) {
+    //     $prix_total = $prix * $this->Reversation->getNuitResa;
+    //     $total += $prix_total;
+    //     echo "Total : " . $prix_total . "€<br>";
+    // }
+
 }

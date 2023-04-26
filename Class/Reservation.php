@@ -4,21 +4,23 @@ class Reservation
 {
    //Attributs :
    private Client $clients;
-   private Chambre $chambres;
+   private Chambre $chambre;
    private DateTime $dateEntree;
    private DateTime $dateSortie;
    
 
+   
 
-   public function __construct(Client $clients, Chambre $chambres, string $dateEntree, string $dateSortie)
+
+   public function __construct(Client $clients, Chambre $chambre, string $dateEntree, string $dateSortie)
    {
       $this->clients = $clients;
-      $this->chambres = $chambres;
+      $this->chambre = $chambre;
       $this->dateEntree = new DateTime($dateEntree);
       $this->dateSortie = new DateTime($dateSortie);
       $this->clients->ajoutResa($this);
-      $this->chambres->ajoutResa($this);
-      $this->chambres->getHotel()->ajoutResa($this);
+      $this->chambre->ajoutResa($this);
+      $this->chambre->getHotel()->ajoutResa($this);
    }
 
 
@@ -38,14 +40,14 @@ class Reservation
       $this->clients = $clients;
    }
 
-   public function getChambres()
+   public function getChambre()
    {
-      return $this->chambres;
+      return $this->chambre;
    }
 
-   public function setChambres($chambres)
+   public function setChambre($chambre)
    {
-      $this->chambres = $chambres;
+      $this->chambre = $chambre;
    }
 
    public function getDateEntree()
@@ -69,11 +71,12 @@ class Reservation
    }
 
 
-// ajouter les dates
+
    public function __toString()
    {
-      return $this->clients . " " . $this->chambres;
+      return $this->clients . " " . $this->chambre;
    }
+
 
 
    public function ajoutResa(Reservation $nouvelleResa)
@@ -81,14 +84,15 @@ class Reservation
        $this->clients[] = $nouvelleResa;
    }
 
+// calcule le nombre de nuit par réservation :
 
 
-   // public function getInfoResaHotel()
-   // {
-   //    $result = "<h2>Réservations de $this</h2><br>";
-   //    foreach ($this->client as $client) {
-   //       $result .= $client . "<br>";
-   //    }
-   //    echo $result;  
-   // }
+   public function getNuitResa()
+   { 
+      $dateEntree = ($this->dateEntree);
+      $dateSortie = ($this->dateSortie);
+      $nuitResa = $dateEntree->diff($dateSortie);
+      $nuitResa = $nuitResa->days; 
+      return $nuitResa;
+   } 
 }

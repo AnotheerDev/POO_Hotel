@@ -17,27 +17,26 @@ spl_autoload_register(function ($class_name) {
 // Classe associative client > chambre > date de reservation : fait
 // chainage pour aller chercher des infos " -> " :
 // ajouter les objets chambres et reservations dans l'index : fait
-// les dates ne s'affichent pas dans getinforesa
 // attribut reserver dans chambre
 // count du reserver
-
+// creer tableau de chambre
 
 
 // objet de la class Hotel :
-$hotelHilton = new Hotel("Hilton", "****", 30, "10 route de la Gare", "67000", "STRASBOURG");
-$hotelRegent = new Hotel("Regent", "****", 25, "6 rue Pierre Demours", "75017", "PARIS");
+$hotelHilton = new Hotel("Hilton", "****", "10 route de la Gare", "67000", "STRASBOURG");
+$hotelRegent = new Hotel("Regent", "****", "6 rue Pierre Demours", "75017", "PARIS");
 
 
 
 // objet de la class Chambre :
-$chambre1 = new Chambre("1", "2", 120, "false", "true", $hotelHilton);
-$chambre2 = new Chambre("2", "2", 120, "false", "true", $hotelHilton);
-$chambre3 = new Chambre("3", "2", 120, "false", "true", $hotelHilton);
-$chambre4 = new Chambre("4", "2", 120, "false", "true", $hotelHilton);
-$chambre16 = new Chambre("16", "3", 300, "true", "true", $hotelHilton);
-$chambre17 = new Chambre("17", "3", 300, "true", "true", $hotelHilton);
-$chambre18 = new Chambre("18", "3", 300, "true", "true", $hotelHilton);
-$chambre19 = new Chambre("19", "3", 300, "true", "true", $hotelHilton);
+$chambre1 = new Chambre("1", "2", 120, false, true, $hotelHilton);
+$chambre2 = new Chambre("2", "2", 120, false, true, $hotelHilton);
+$chambre3 = new Chambre("3", "2", 120, false, true, $hotelHilton);
+$chambre4 = new Chambre("4", "2", 120, false, true, $hotelHilton);
+$chambre16 = new Chambre("16", "3", 300, true, true, $hotelHilton);
+$chambre17 = new Chambre("17", "3", 300, true, true, $hotelHilton);
+$chambre18 = new Chambre("18", "3", 300, true, true, $hotelHilton);
+$chambre19 = new Chambre("19", "3", 300, true, true, $hotelHilton);
 
 
 
@@ -68,3 +67,6 @@ $mickaMurmann->getInfoResaClient();
 echo "-------------------------------------------<br>";
 $hotelHilton->getInfoResaHotel();
 echo "-------------------------------------------<br>";
+$hotelRegent->getInfoResaHotel();
+echo "-------------------------------------------<br>";
+echo $resaMicka2->getNuitResa();
