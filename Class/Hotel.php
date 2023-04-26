@@ -80,10 +80,10 @@ class Hotel
     }
 
 
-   public function ajoutChambre( Chambre $nouvelleChambre)
-   {
-       $this->chambres[] = $nouvelleChambre;
-   }
+    public function ajoutChambre( Chambre $nouvelleChambre)
+    {
+        $this->chambres[] = $nouvelleChambre;
+    }
 
 
     public function __toString()

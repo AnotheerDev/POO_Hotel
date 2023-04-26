@@ -81,7 +81,7 @@ class Reservation
 
    public function ajoutResa(Reservation $nouvelleResa)
    {
-       $this->clients[] = $nouvelleResa;
+      $this->clients[] = $nouvelleResa;
    }
 
 // calcule le nombre de nuit par réservation :
