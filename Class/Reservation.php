@@ -7,9 +7,9 @@ class Reservation
    private Chambre $chambre;
    private DateTime $dateEntree;
    private DateTime $dateSortie;
-   
 
-   
+
+
 
 
    public function __construct(Client $clients, Chambre $chambre, string $dateEntree, string $dateSortie)
@@ -84,15 +84,19 @@ class Reservation
       $this->clients[] = $nouvelleResa;
    }
 
-// calcule le nombre de nuit par réservation :
-
-
+   // calcule le nombre de nuit par réservation :
    public function getNuitResa()
-   { 
+   {
       $dateEntree = ($this->dateEntree);
       $dateSortie = ($this->dateSortie);
       $nuitResa = $dateEntree->diff($dateSortie);
-      $nuitResa = $nuitResa->days; 
+      $nuitResa = $nuitResa->days;
       return $nuitResa;
-   } 
+   }
+
+   // fonction qui multiplie le prix de la chambre par getNuitResa()
+   public function getPrix()
+   {
+      return $this->getChambre()->getPrix() * $this->getNuitResa();
+   }
 }

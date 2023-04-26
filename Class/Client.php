@@ -51,17 +51,25 @@ class Client
     public function getInfoResaClient()
     {
         $result = "<h2>Réservations de $this</h2><br>";
+        $solde = 0;
         foreach ($this->reservations as $resa) {
             $result .= $resa . "<br>";
+            $solde += $resa->getPrix() ;
         }
+        $result .= "Total : $solde <br>";
         echo $result;
     }
 
-   
 
-    
+
+    // initialiser un count à 0 
+    // a chaque boucle on fait le calcul du sejour qu'on ajoute au suivant jusqu'a avoir le total
+
+
+
+
     // foreach ($this->reservations as $resa => $prix) {
-    //     $prix_total = $prix * $this->Reversation->getNuitResa;
+    //     $prix_total = $prix * $this->Reservation->getNuitResa;
     //     $total += $prix_total;
     //     echo "Total : " . $prix_total . "€<br>";
     // }

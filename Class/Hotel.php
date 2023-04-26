@@ -47,7 +47,7 @@ class Hotel
         $this->etoile = $etoile;
     }
 
- 
+
 
     public function getAdresse()
     {
@@ -140,7 +140,7 @@ class Hotel
                 echo $result;
         }
     }
-        
-        
-        
+    
+    
+    
 }
