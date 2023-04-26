@@ -67,3 +67,4 @@ echo "-------------------------------------------<br>";
 $mickaMurmann->getInfoResaClient();
 echo "-------------------------------------------<br>";
 $hotelHilton->getInfoResaHotel();
+echo "-------------------------------------------<br>";
