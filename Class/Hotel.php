@@ -9,7 +9,8 @@ class Hotel
     private string $adresse;
     private string $cp;
     private string $ville;
-    private array $clients;
+    private array $reservations;
+
 
 
 
@@ -22,7 +23,7 @@ class Hotel
         $this->adresse = $adresse;
         $this->cp = $cp;
         $this->ville = $ville;
-        $this->clients = [];
+        $this->reservations = [];
     }
 
     // getter et setter pour chaque attribut de ma class :
@@ -87,10 +88,10 @@ class Hotel
     }
 
 
-    public function addClient($client)
-    {
-        $this->clients[] = $client;
-    }
+    // public function addClient($client)
+    // {
+    //     $this->clients[] = $client;
+    // }
 
 
     public function __toString()
@@ -98,23 +99,30 @@ class Hotel
         return $this->nom . " " . $this->etoile . " " . $this->ville;
     }
 
-
+    public function ajoutResa(Reservation $nouvelleResa)
+    {
+        $this->reservations[] = $nouvelleResa;
+    }
+    
     public function getInfoHotel()
     {
         $result = "<h2>$this</h2><br>"
             . "Nombre de chambres : $this->nbChambre <br>"
             . "Nombre de chambres réservées :  <br>"
             . "Nombre de chambres dispo :  <br>";
-        echo $result;
-    }
-
-
-    public function getInfoResaHotel()
-    {
-        $result = "<h2>Réservations au $this</h2><br>";
-        foreach ($this->clients as $client) {
-            $result .= $client . "<br>";
+            echo $result;
         }
-        echo $result;
-    }
+        
+        
+        public function getInfoResaHotel()
+        {
+            $result = "<h2>Réservations au $this</h2><br>";
+            foreach ($this->reservations as $resa) {
+                $result .= $resa . "<br>";
+            }
+            echo $result;
+        }
+        
+        
+        
 }

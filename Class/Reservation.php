@@ -7,6 +7,7 @@ class Reservation
    private Chambre $chambres;
    private DateTime $dateEntree;
    private DateTime $dateSortie;
+   
 
 
    public function __construct(Client $clients, Chambre $chambres, string $dateEntree, string $dateSortie)
@@ -17,8 +18,7 @@ class Reservation
       $this->dateSortie = new DateTime($dateSortie);
       $this->clients->ajoutResa($this);
       $this->chambres->ajoutResa($this);
-      // ajout hotel à la class chambre ?
-      // $this->chambres->getHotel->ajoutResa($this); ajouter
+      $this->chambres->getHotel()->ajoutResa($this);
    }
 
 
@@ -76,6 +76,12 @@ class Reservation
    }
 
 
+   public function ajoutResa(Reservation $nouvelleResa)
+   {
+       $this->clients[] = $nouvelleResa;
+   }
+
+
 
    // public function getInfoResaHotel()
    // {
@@ -83,6 +89,6 @@ class Reservation
    //    foreach ($this->client as $client) {
    //       $result .= $client . "<br>";
    //    }
-   //    echo $result; 
+   //    echo $result;  
    // }
 }
