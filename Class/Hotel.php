@@ -80,7 +80,7 @@ class Hotel
     }
 
 
-    public function ajoutChambre( Chambre $nouvelleChambre)
+    public function ajoutChambre(Chambre $nouvelleChambre)
     {
         $this->chambres[] = $nouvelleChambre;
     }
@@ -95,7 +95,7 @@ class Hotel
     {
         $this->reservations[] = $nouvelleResa;
     }
-    
+
 
     public function calculNbReservees()
     {
@@ -116,17 +116,29 @@ class Hotel
     }
 
 
+
+
+
+// ------------ implémenter le html pour le rendu ---------------
+
+
     public function getInfoHotel()
     {
         $result = "<h2>$this</h2><br>"
-            . $this->adresse . " " . $this->ville ."<br>"
-            . "Nombre de chambres : ".count($this->chambres) ."<br>"
-            . "Nombre de chambres réservées : ".$this->calculNbReservees()." <br>"
-            . "Nombre de chambres dispo : ".$this->calculNbChambresDispo()."  <br>";
-            echo $result;
-        }
-        
-        
+            . $this->adresse . " " . $this->ville . "<br>"
+            . "Nombre de chambres : " . count($this->chambres) . "<br>"
+            . "Nombre de chambres réservées : " . $this->calculNbReservees() . " <br>"
+            . "Nombre de chambres dispo : " . $this->calculNbChambresDispo() . "  <br>";
+        echo $result;
+    }
+
+
+
+
+
+// ------------ implémenter le html pour le rendu ---------------
+
+
     public function getInfoResaHotel()
     {
         if (count($this->reservations) === 0) {
@@ -137,10 +149,7 @@ class Hotel
             foreach ($this->reservations as $resa) {
                 $result .= $resa . "<br>";
             }
-                echo $result;
+            echo $result;
         }
     }
-    
-    
-    
 }

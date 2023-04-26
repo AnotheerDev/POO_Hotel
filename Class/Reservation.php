@@ -52,7 +52,7 @@ class Reservation
 
    public function getDateEntree()
    {
-      return $this->dateEntree;
+      return $this->dateEntree->format('d-m-Y');
    }
 
    public function setDateEntree($dateEntree)
@@ -62,7 +62,7 @@ class Reservation
 
    public function getDateSortie()
    {
-      return $this->dateSortie;
+      return $this->dateSortie->format('d-m-Y');
    }
 
    public function setDateSortie($dateSortie)

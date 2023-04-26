@@ -63,10 +63,9 @@ $resaVirgile = new Reservation($virgileGibello, $chambre17, "01-01-2021", "01-01
 
 $hotelHilton->getInfoHotel();
 echo "-------------------------------------------<br>";
-$mickaMurmann->getInfoResaClient();
-echo "-------------------------------------------<br>";
 $hotelHilton->getInfoResaHotel();
 echo "-------------------------------------------<br>";
 $hotelRegent->getInfoResaHotel();
 echo "-------------------------------------------<br>";
-echo $resaMicka2->getNuitResa();
+$mickaMurmann->getInfoResaClient();
+echo "-------------------------------------------<br>";

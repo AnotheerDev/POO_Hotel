@@ -92,21 +92,22 @@ class Chambre
 
     public function __toString()
     {
-        return "Chambre " . $this->numero . "(" . $this->nbLits . " lits - " . $this->prix . " € - " . " Wifi : " . $this->wifi . ")";
+        return "Chambre " . $this->numero . "(" . $this->nbLits . " lits - " . $this->prix . " € - " . " Wifi : " . $this->getStatusWifi() . ")" . " du " . $this->reservations[0]->getDateEntree() . " au " . $this->reservations[0]->getDateSortie() . "<br>";
     }
 
 
+    public function getStatusWifi()
+    {
+        if ($this->wifi) {
+            return "oui";
+        } else {
+            return "non";
+        }
+    }
 
 
     public function ajoutResa(Reservation $nouvelleResa)
     {
         $this->reservations[] = $nouvelleResa;
     }
-
-
-
-
-
-
-
 }
