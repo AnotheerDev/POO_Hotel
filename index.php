@@ -17,9 +17,33 @@ spl_autoload_register(function ($class_name) {
 // Classe associative client > chambre > date de reservation : fait
 // chainage pour aller chercher des infos " -> " :
 // ajouter les objets chambres et reservations dans l'index : fait
-// attribut reserver dans chambre
-// count du reserver
-// creer tableau de chambre
+// creer tableau de chambre : fait
+// creer methode afficher chambre dans hotel pour le tableau html :
+// creer une définition de Class et l'expliquer qu'est ce qu'un attribut ??? une méthode ?? un objet ?? le chainage ??
+
+// Définition d'une classe :
+// une classe possède des attributs ou variables d'instances
+// ces aatributs nous servent à créer un objet à l'aide de la fonction __construct
+// chaque attribut à un getter et setter 
+// le getter permet de récuperer l'info de l'attribut
+// le setter permet de modifier à la volée l'attribut
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // objet de la class Hotel :

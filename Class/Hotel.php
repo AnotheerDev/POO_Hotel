@@ -152,4 +152,16 @@ class Hotel
             echo $result;
         }
     }
+
+
+
+    // Avece cette fonction je dois faire resortir le tableau comme sur l'exemple de l'exo
+
+
+
+    public function afficherChambres()
+    {
+        
+    }
+
 }
