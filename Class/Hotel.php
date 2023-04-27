@@ -176,13 +176,15 @@ class Hotel
             <?php
             foreach($this->reservations as $resa){
                 ?><tr>
-                    <td><?php ?></td>
-                    <td><?php ?></td>
-                    <td><?php ?></td>
-                    <td><?php ?></td>
+                    <td><?php echo $resa->chambre()->getNumero() ?></td>
+                    <td><?php echo $resa->chambre()->getPrix() ?></td>
+                    <td><?php if($resa->chambre->getWifi)
+                    echo '&#128246;' ?></td>
+                    <td><?php if($resa->chambre->getEtat)
+                    echo "Disponible" ?></td>
                 </tr>
-            }
+            <?php } ?>
         </tbody>
-    }
+    <?php
 
 }
