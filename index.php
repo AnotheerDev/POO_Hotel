@@ -93,3 +93,4 @@ $hotelRegent->getInfoResaHotel();
 echo "-------------------------------------------<br>";
 $mickaMurmann->getInfoResaClient();
 echo "-------------------------------------------<br>";
+echo $hotelHilton->afficherTableauResa();

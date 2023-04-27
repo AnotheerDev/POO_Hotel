@@ -71,7 +71,6 @@ class Reservation
    }
 
 
-
    public function __toString()
    {
       return $this->clients . " " . $this->chambre;
