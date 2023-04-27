@@ -176,7 +176,7 @@ class Hotel
             <?php
             foreach ($this->chambres as $chambre) {
             ?><tr>
-                    <td><?php echo $chambre->getNumero() ?></td>
+                    <td><?php echo "Chambre " . $chambre->getNumero() ?></td>
                     <td><?php echo $chambre->getPrix() . "€" ?></td>
                     <td><?php if ($chambre->getWifi())
                             echo '&#128246;' ?></td>

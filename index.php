@@ -1,4 +1,12 @@
+<header>
+    <link rel="stylesheet" href="Class/Style.css">
+</header>
+
+
+
+
 <h1> Exercice POO Hotel </h1>
+
 
 <p> A partir de ces captures d’écran, réaliser l’application en POO
     permettant la gestion de réservations de chambres par des clients dans différents hôtels:</p>
