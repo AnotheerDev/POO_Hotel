@@ -119,7 +119,7 @@ class Hotel
 
 
 
-// ------------ implémenter le html pour le rendu ---------------
+    // ------------ implémenter le html pour le rendu ---------------
 
 
     public function getInfoHotel()
@@ -136,7 +136,7 @@ class Hotel
 
 
 
-// ------------ implémenter le html pour le rendu ---------------
+    // ------------ implémenter le html pour le rendu ---------------
 
 
     public function getInfoResaHotel()
@@ -159,9 +159,39 @@ class Hotel
 
 
 
-    public function afficherChambres()
-    {
-        
-    }
 
-}
+    public function afficherTableauResa()
+    {
+?>
+        <strong>Status des chambres de <?= $this ?></strong>
+        <table>
+            <thead>
+                <tr>
+                    <th>Chambre</th>
+                    <th>Prix</th>
+                    <th>Wifi</th>
+                    <th>Etat</th>
+                </tr>
+                </tead>
+            <tbody><?php
+                    foreach ($this->chambres as $chambre) {
+                    ?><tr>
+                        <td><?php echo "Chambre " . $chambre->getNumero() ?></td>
+                        <td><?php echo $chambre->getPrix() . "€" ?></td>
+                        <td><?php
+                            if ($chambre->getWifi()) { ?>
+                                <i class="fa-solid fa-wifi"></i><?php
+                                                                ?>
+                        </td>
+                        <td><?php
+                                if (!$chambre->getEtat()) {
+                                    echo "disponible";
+                                } else {
+                                    echo "Réservée";
+                                }
+                            ?></td>
+                    </tr><?php
+                            }
+                        }
+                    }
+                }
