@@ -21,6 +21,7 @@ class Reservation
       $this->clients->ajoutResa($this);
       $this->chambre->ajoutResa($this);
       $this->chambre->getHotel()->ajoutResa($this);
+      $this->chambre->setEtat(false);
    }
 
 
