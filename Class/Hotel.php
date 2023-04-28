@@ -141,11 +141,14 @@ class Hotel
 
     public function getInfoResaHotel()
     {
+
         if (count($this->reservations) === 0) {
             echo "<h2>Réservations au $this</h2><br>";
             echo "Pas de réservation <br>";
         } else {
             $result = "<h2>Réservations au $this</h2><br>";
+            $nbReservations = count($this->reservations);
+            $result .= "<p><span class='nb-reservations'>$nbReservations RESERVATION" . ($nbReservations > 1 ? "S" : "") . "</span></p>";
             foreach ($this->reservations as $resa) {
                 $result .= $resa . "<br>";
             }

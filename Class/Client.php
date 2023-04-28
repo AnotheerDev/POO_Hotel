@@ -51,12 +51,14 @@ class Client
 
 
 
-// ------------ implémenter le html pour le rendu ---------------
+    // ------------ implémenter le html pour le rendu ---------------
 
 
     public function getInfoResaClient()
     {
+        $nbReservations = count($this->reservations);
         $result = "<h2>Réservations de $this</h2><br>";
+        $result .= "<p><span class='nb-reservations'>$nbReservations RESERVATION" . ($nbReservations > 1 ? "S" : "") . "</span></p>";
         $solde = 0;
         foreach ($this->reservations as $resa) {
             $result .= $resa . "<br>";
@@ -65,8 +67,4 @@ class Client
         $result .= "Total : $solde <br>";
         echo $result;
     }
-
-
-
-
 }
