@@ -11,8 +11,7 @@ th,td {
 }
 
 th {
-    background-color: #4CAF50;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -32,12 +31,4 @@ td:last-child > div {
     font-weight: normal;
     color: #fff;
     text-align: center;
-}
-
-td:last-child > div.available {
-    background-color: #2ecc71;
-}
-
-td:last-child > div.reserved {
-    background-color: #e74c3c;
 }

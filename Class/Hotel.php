@@ -161,7 +161,9 @@ class Hotel
     public function afficherTableauResa()
     {
 ?>
-        <strong> Status des chambres de <?= $this ?></strong>
+        <strong>
+            <h1> Status des chambres de <?= $this ?></h1>
+        </strong>
         <table>
             <thead>
                 <tr>
@@ -174,20 +176,13 @@ class Hotel
             <tbody>
                 <?php
                 foreach ($this->chambres as $chambre) {
+                    $etat = $chambre->getEtat() ? 'disponible' : 'reservee';
                 ?> <tr>
                         <td><?php echo "Chambre " . $chambre->getNumero() ?></td>
                         <td><?php echo $chambre->getPrix() . "€" ?></td>
                         <td><?php if ($chambre->getWifi())
                                 echo '&#128246;' ?></td>
-                        <td><?php
-                            if ($chambre->getEtat()) { ?>
-                                <div>disponible<div>
-                                    <?php
-                                } else { ?>
-                                        <div>Réservée</div>
-                                    <?php
-                                } ?>
-                        </td>
+                        <td><?= $chambre->getEtat() ? 'disponible' : 'réservée' ?></td>
                     </tr>
                 <?php } ?>
             </tbody>
