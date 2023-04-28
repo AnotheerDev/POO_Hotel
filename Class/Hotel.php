@@ -176,13 +176,13 @@ class Hotel
             <tbody>
                 <?php
                 foreach ($this->chambres as $chambre) {
-                    $etat = $chambre->getEtat() ? 'disponible' : 'reservee';
+                    $etat = $chambre->getEtat() ? '<span class="etat-disponible">disponible</span>' : '<span class="etat-reservee">réservée</span>';
                 ?> <tr>
                         <td><?php echo "Chambre " . $chambre->getNumero() ?></td>
                         <td><?php echo $chambre->getPrix() . "€" ?></td>
                         <td><?php if ($chambre->getWifi())
                                 echo '&#128246;' ?></td>
-                        <td><?= $chambre->getEtat() ? 'disponible' : 'réservée' ?></td>
+                        <td><?= $chambre->getEtat() ? '<span class="etat-disponible">disponible</span>' : '<span class="etat-reservee">réservée</span>' ?></td>
                     </tr>
                 <?php } ?>
             </tbody>
