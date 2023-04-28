@@ -1,0 +1,43 @@
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+th,td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+td:first-child {
+    font-weight: bold;
+}
+
+td:last-child {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+td:last-child > div {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+}
+
+td:last-child > div.available {
+    background-color: #2ecc71;
+}
+
+td:last-child > div.reserved {
+    background-color: #e74c3c;
+}

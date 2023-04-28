@@ -1,6 +1,12 @@
-<header>
-    <link rel="stylesheet" href="Class/Style.css">
-</header>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+</html>
 
 
 
