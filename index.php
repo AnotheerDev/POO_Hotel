@@ -46,6 +46,19 @@ spl_autoload_register(function ($class_name) {
 
 
 
+// Définition d'une classe :
+
+// Une classe en programmation orientée objet (POO) est un modèle ou une représentation abstraite d'un concept ou d'un objet du monde réel. Elle définit les propriétés et les comportements (méthodes) communs à tous les objets appartenant à cette classe.
+// En d'autres termes, une classe peut être considérée comme un moule ou un plan de construction pour créer des objets qui ont des caractéristiques et des comportements similaires. Les objets créés à partir d'une classe sont appelés des instances de cette classe.
+
+// les méthodes magiques sont également des méthodes spéciales qui ont un nom particulier, commençant et finissant par deux underscores. Elles permettent de personnaliser le comportement d'une classe en réponse à certains événements, tels que la création d'une instance de la classe, l'accès à des propriétés, l'appel de méthodes
+// exemple de méthodes magiques:
+
+// __construct() : méthode appelée lors de la création d'une nouvelle instance de la classe.
+// __toString() : méthode appelée par la fonction echo ou print pour obtenir une représentation en chaîne de caractères de l'objet. Généralement on y met des infos pratiques qu'on peut utiliser facilement 
+// get($name) : méthode appelée lorsqu'une propriété inaccessible(private ou protected) est accédée en lecture.
+// set($name) : méthode appelée lorsqu'une propriété inaccessible(private ou protected) est assignée une valeur.
+
 
 
 
